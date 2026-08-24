@@ -1,0 +1,857 @@
+// ============================================
+// SAMA United Real Estate Co - Main JavaScript
+// ============================================
+
+// ---------- Translations ----------
+const translations = {
+    en: {
+        "nav.home": "Home",
+        "nav.about": "About Us",
+        "nav.properties": "Properties",
+        "nav.services": "Services",
+        "nav.contact": "Contact",
+        "nav.advisor": "Talk to an Advisor",
+        "lang.current": "English",
+        "hero.eyebrow": "Real Estate Consultant · Al Khobar",
+        "hero.subtitle": "Professional and trusted real-estate consultation for clients and families in Al Khobar, Saudi Arabia.",
+        "hero.viewProperties": "View Properties",
+        "hero.talkAdvisor": "Talk to an Advisor",
+        "about.eyebrow": "About Us",
+        "about.heading": "About SAMA United Real Estate Co.",
+        "about.paragraph1": "شركة سمة المتحدة العقارية SAMA United Real Estate Co is a professional real-estate consultant serving Al-Thuqbah / Al Khobar, Saudi Arabia. We provide trusted guidance for families and clients seeking residential, commercial, and investment properties.",
+        "about.paragraph2": "Our team is dedicated to clear property guidance, client support, and a premium real-estate experience from first inquiry to final decision.",
+        "about.learnMore": "Learn more about us →",
+        "stats.rating": "Google Rating",
+        "stats.reviews": "Reviews",
+        "stats.local": "Local Real Estate Consultant",
+        "services.eyebrow": "What we do",
+        "services.heading": "Real Estate Services",
+        "services.residential.category": "Residential",
+        "services.residential.title": "Family Residential Properties",
+        "services.residential.desc": "Family-friendly residential properties and guidance.",
+        "services.residential.cta": "Explore Residential",
+        "services.commercial.category": "Commercial",
+        "services.commercial.title": "Commercial Opportunities",
+        "services.commercial.desc": "Commercial property opportunities and consultation.",
+        "services.commercial.cta": "Explore Commercial",
+        "services.guidance.category": "Guidance",
+        "services.guidance.title": "Property Guidance",
+        "services.guidance.desc": "Clear guidance to help clients make confident property decisions.",
+        "services.guidance.cta": "Get Guidance",
+        "services.consultation.category": "Consultation",
+        "services.consultation.title": "Real Estate Consultation",
+        "services.consultation.desc": "Professional real-estate consultation in Al Khobar.",
+        "services.consultation.cta": "Book Consultation",
+        "featured.eyebrow": "Curated Listings",
+        "featured.heading": "Featured Properties",
+        "featured.viewAll": "View All Properties",
+        "cta.heading": "Ready to find the right property?",
+        "cta.subtitle": "Speak with our real-estate advisor and get professional property guidance.",
+        "cta.viewProperties": "View Properties",
+        "cta.talkAdvisor": "Talk to an Advisor",
+        "footer.tagline": "Professional real-estate consultancy in Al Khobar, Saudi Arabia.",
+        "footer.company": "Company",
+        "footer.services": "Services",
+        "footer.legal": "Legal",
+        "footer.contact": "Contact",
+        "footer.privacy": "Privacy Policy",
+        "footer.terms": "Terms of Service",
+        "footer.cookies": "Cookie Policy",
+        "footer.address": "3rd St, Al-Thuqbah, Al Khobar 34623, Saudi Arabia",
+        "footer.hours": "Sat–Thu: 09:00–21:30, Fri: Closed",
+        "filters.all": "All",
+        "filters.residential": "Residential",
+        "filters.commercial": "Commercial",
+        "filters.family": "Family",
+        "filters.available": "Available",
+        "properties.eyebrow": "Listings",
+        "properties.pageTitle": "Our Properties",
+        "contact.eyebrow": "Get in touch",
+        "contact.pageTitle": "Contact Us",
+        "contact.infoTitle": "Contact Information",
+        "contact.addressLabel": "Address:",
+        "contact.emailLabel": "Email:",
+        "contact.phoneLabel": "Phone:",
+        "contact.whatsappLabel": "WhatsApp:",
+        "contact.hoursTitle": "Opening Hours",
+        "contact.mapTitle": "Visit Our Location",
+        "contact.mapAddress": "شركة سمة المتحدة العقارية SAMA United Real Estate Co<br>3rd St, Al-Thuqbah, Al Khobar 34623, Saudi Arabia",
+        "hours.saturday": "Saturday: 09:00–11:30, 15:30–21:30",
+        "hours.sunday": "Sunday: 09:00–11:30, 15:30–21:30",
+        "hours.monday": "Monday: 09:00–11:30, 15:30–21:30",
+        "hours.tuesday": "Tuesday: 09:00–11:30, 13:30–21:30",
+        "hours.wednesday": "Wednesday: 09:00–11:30, 13:30–21:30",
+        "hours.thursday": "Thursday: 09:00–11:30, 13:30–21:30",
+        "hours.friday": "Friday: Closed",
+        "advisor.eyebrow": "Consultation",
+        "advisor.pageTitle": "Talk to an Advisor",
+        "advisor.subtitle": "Our team is ready to help you with your real-estate requirements.",
+        "form.fullName": "Full Name *",
+        "form.email": "Email *",
+        "form.phone": "Phone *",
+        "form.propertyType": "Property Type *",
+        "form.selectProperty": "Select property type",
+        "form.residential": "Residential",
+        "form.commercial": "Commercial",
+        "form.family": "Family",
+        "form.other": "Other",
+        "form.message": "Message *",
+        "form.sendInquiry": "Send Inquiry",
+        "form.successMessage": "Thank you. Your inquiry has been received successfully. Our advisor will assist you shortly.",
+        "service.residential.eyebrow": "Our Services",
+        "service.residential.title": "Residential Properties",
+        "service.residential.heading": "Family-Friendly Residential Guidance",
+        "service.residential.paragraph1": "We help families find the perfect home in Al Khobar, focusing on safety, comfort, and long-term value. From modern apartments to spacious villas, our residential listings are curated to meet your needs.",
+        "service.residential.paragraph2": "Our advisors provide clear guidance on neighbourhoods, amenities, and investment potential, ensuring you make a confident decision.",
+        "service.residential.benefit1": "Family-oriented property options",
+        "service.residential.benefit2": "Neighbourhood insights",
+        "service.residential.benefit3": "Investment advice",
+        "service.residential.benefit4": "Premium client support",
+        "service.residential.viewProperties": "View Properties",
+        "service.residential.talkAdvisor": "Talk to an Advisor",
+        "service.commercial.eyebrow": "Our Services",
+        "service.commercial.title": "Commercial Properties",
+        "service.commercial.heading": "Commercial Opportunities & Consultation",
+        "service.commercial.paragraph1": "Our commercial division offers expert consultation for office spaces, retail outlets, and investment properties in Al Khobar's dynamic market.",
+        "service.commercial.paragraph2": "We analyse location, footfall, and growth potential to help you secure the right commercial asset.",
+        "service.commercial.benefit1": "Investment analysis",
+        "service.commercial.benefit2": "Prime locations",
+        "service.commercial.benefit3": "ROI-focused advice",
+        "service.commercial.benefit4": "Negotiation support",
+        "service.commercial.viewProperties": "View Properties",
+        "service.commercial.talkAdvisor": "Talk to an Advisor",
+        "service.guidance.eyebrow": "Our Services",
+        "service.guidance.title": "Property Guidance",
+        "service.guidance.heading": "Clear, Confident Property Decisions",
+        "service.guidance.paragraph1": "We help you navigate the Al Khobar real-estate market with transparent advice on pricing, legal processes, and property selection.",
+        "service.guidance.paragraph2": "From first-time buyers to seasoned investors, our guidance ensures you understand every step.",
+        "service.guidance.benefit1": "Market analysis",
+        "service.guidance.benefit2": "Legal process overview",
+        "service.guidance.benefit3": "Property comparison",
+        "service.guidance.benefit4": "Negotiation tips",
+        "service.guidance.viewProperties": "View Properties",
+        "service.guidance.talkAdvisor": "Talk to an Advisor",
+        "service.consultation.eyebrow": "Our Services",
+        "service.consultation.title": "Real Estate Consultation",
+        "service.consultation.heading": "Professional Real Estate Consultation",
+        "service.consultation.paragraph1": "Our consultants provide personalised advice for buying, selling, or investing in Al Khobar's real-estate market.",
+        "service.consultation.paragraph2": "We combine local knowledge with professional analysis to help you achieve your property goals.",
+        "service.consultation.benefit1": "One-on-one consultations",
+        "service.consultation.benefit2": "Market valuation",
+        "service.consultation.benefit3": "Investment strategy",
+        "service.consultation.benefit4": "After-sale support",
+        "service.consultation.viewProperties": "View Properties",
+        "service.consultation.talkAdvisor": "Talk to an Advisor",
+        "service.relatedTitle": "Related Services",
+        "legal.privacyTitle": "Privacy Policy",
+        "legal.updated": "Last updated: January 2026",
+        "legal.privacyIntroTitle": "Introduction",
+        "legal.privacyIntro": "SAMA United Real Estate Co (\"we\", \"our\", \"us\") respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you visit our website or use our services.",
+        "legal.privacyDataTitle": "Information We Collect",
+        "legal.privacyData": "We may collect personal information such as your name, email address, phone number, and any details you provide through our contact forms or advisor inquiries.",
+        "legal.privacyUseTitle": "How We Use Your Information",
+        "legal.privacyUse": "We use your information to respond to inquiries, provide real-estate services, improve our website, and comply with legal obligations.",
+        "legal.privacyShareTitle": "Information Sharing",
+        "legal.privacyShare": "We do not sell your personal data. We may share information with trusted third parties who assist us in operating our website or conducting business, provided they agree to keep it confidential.",
+        "legal.privacySecurityTitle": "Data Security",
+        "legal.privacySecurity": "We implement appropriate technical and organisational measures to protect your personal data against unauthorised access, alteration, or disclosure.",
+        "legal.privacyRightsTitle": "Your Rights",
+        "legal.privacyRights": "You have the right to access, correct, or delete your personal information. To exercise these rights, please contact us at contact.sama.unitedrealestate@gmail.com.",
+        "legal.privacyCookiesTitle": "Cookies",
+        "legal.privacyCookies": "Our website may use cookies to enhance your browsing experience. See our Cookie Policy for more details.",
+        "legal.privacyContactTitle": "Contact Us",
+        "legal.privacyContact": "If you have any questions about this privacy policy, please contact us at contact.sama.unitedrealestate@gmail.com or call +966 50 572 3111.",
+    },
+    ar: {
+        "nav.home": "الرئيسية",
+        "nav.about": "من نحن",
+        "nav.properties": "العقارات",
+        "nav.services": "الخدمات",
+        "nav.contact": "اتصل بنا",
+        "nav.advisor": "تحدث إلى مستشار",
+        "lang.current": "العربية",
+        "hero.eyebrow": "مستشار عقاري · الخبر",
+        "hero.subtitle": "استشارات عقارية موثوقة ومهنية للعملاء والعائلات في الخبر، المملكة العربية السعودية.",
+        "hero.viewProperties": "عرض العقارات",
+        "hero.talkAdvisor": "تحدث إلى مستشار",
+        "about.eyebrow": "من نحن",
+        "about.heading": "عن شركة سمة المتحدة العقارية",
+        "about.paragraph1": "شركة سمة المتحدة العقارية SAMA United Real Estate Co هي مستشار عقاري محترف يخدم الثقبة / الخبر، المملكة العربية السعودية. نقدم إرشادات موثوقة للعائلات والعملاء الباحثين عن عقارات سكنية وتجارية واستثمارية.",
+        "about.paragraph2": "فريقنا ملتزم بتقديم إرشادات عقارية واضحة ودعم العملاء وتجربة عقارية متميزة من الاستفسار الأول حتى القرار النهائي.",
+        "about.learnMore": "اعرف المزيد عنا ←",
+        "stats.rating": "تقييم جوجل",
+        "stats.reviews": "المراجعات",
+        "stats.local": "مستشار عقاري محلي",
+        "services.eyebrow": "ماذا نقدم",
+        "services.heading": "الخدمات العقارية",
+        "services.residential.category": "سكني",
+        "services.residential.title": "عقارات سكنية عائلية",
+        "services.residential.desc": "عقارات سكنية مناسبة للعائلات مع إرشادات.",
+        "services.residential.cta": "استكشف السكني",
+        "services.commercial.category": "تجاري",
+        "services.commercial.title": "فرص تجارية",
+        "services.commercial.desc": "فرص عقارية تجارية واستشارات.",
+        "services.commercial.cta": "استكشف التجاري",
+        "services.guidance.category": "إرشاد",
+        "services.guidance.title": "الإرشاد العقاري",
+        "services.guidance.desc": "إرشادات واضحة لمساعدة العملاء على اتخاذ قرارات عقارية واثقة.",
+        "services.guidance.cta": "احصل على إرشاد",
+        "services.consultation.category": "استشارة",
+        "services.consultation.title": "الاستشارات العقارية",
+        "services.consultation.desc": "استشارات عقارية احترافية في الخبر.",
+        "services.consultation.cta": "احجز استشارة",
+        "featured.eyebrow": "قوائم مختارة",
+        "featured.heading": "عقارات مميزة",
+        "featured.viewAll": "عرض جميع العقارات",
+        "cta.heading": "هل أنت مستعد للعثور على العقار المناسب؟",
+        "cta.subtitle": "تحدث مع مستشارنا العقاري واحصل على إرشادات عقارية احترافية.",
+        "cta.viewProperties": "عرض العقارات",
+        "cta.talkAdvisor": "تحدث إلى مستشار",
+        "footer.tagline": "استشارات عقارية احترافية في الخبر، المملكة العربية السعودية.",
+        "footer.company": "الشركة",
+        "footer.services": "الخدمات",
+        "footer.legal": "قانوني",
+        "footer.contact": "اتصل",
+        "footer.privacy": "سياسة الخصوصية",
+        "footer.terms": "شروط الخدمة",
+        "footer.cookies": "سياسة ملفات الارتباط",
+        "footer.address": "الشارع الثالث، الثقبة، الخبر 34623، المملكة العربية السعودية",
+        "footer.hours": "السبت–الخميس: 09:00–21:30، الجمعة: مغلق",
+        "filters.all": "الكل",
+        "filters.residential": "سكني",
+        "filters.commercial": "تجاري",
+        "filters.family": "عائلي",
+        "filters.available": "متاح",
+        "properties.eyebrow": "القوائم",
+        "properties.pageTitle": "عقاراتنا",
+        "contact.eyebrow": "تواصل معنا",
+        "contact.pageTitle": "اتصل بنا",
+        "contact.infoTitle": "معلومات الاتصال",
+        "contact.addressLabel": "العنوان:",
+        "contact.emailLabel": "البريد الإلكتروني:",
+        "contact.phoneLabel": "الهاتف:",
+        "contact.whatsappLabel": "واتساب:",
+        "contact.hoursTitle": "ساعات العمل",
+        "contact.mapTitle": "قم بزيارة موقعنا",
+        "contact.mapAddress": "شركة سمة المتحدة العقارية SAMA United Real Estate Co<br>الشارع الثالث، الثقبة، الخبر 34623، المملكة العربية السعودية",
+        "hours.saturday": "السبت: 09:00–11:30، 15:30–21:30",
+        "hours.sunday": "الأحد: 09:00–11:30، 15:30–21:30",
+        "hours.monday": "الاثنين: 09:00–11:30، 15:30–21:30",
+        "hours.tuesday": "الثلاثاء: 09:00–11:30، 13:30–21:30",
+        "hours.wednesday": "الأربعاء: 09:00–11:30، 13:30–21:30",
+        "hours.thursday": "الخميس: 09:00–11:30، 13:30–21:30",
+        "hours.friday": "الجمعة: مغلق",
+        "advisor.eyebrow": "استشارة",
+        "advisor.pageTitle": "تحدث إلى مستشار",
+        "advisor.subtitle": "فريقنا جاهز لمساعدتك في متطلباتك العقارية.",
+        "form.fullName": "الاسم الكامل *",
+        "form.email": "البريد الإلكتروني *",
+        "form.phone": "الهاتف *",
+        "form.propertyType": "نوع العقار *",
+        "form.selectProperty": "اختر نوع العقار",
+        "form.residential": "سكني",
+        "form.commercial": "تجاري",
+        "form.family": "عائلي",
+        "form.other": "أخرى",
+        "form.message": "الرسالة *",
+        "form.sendInquiry": "إرسال الاستفسار",
+        "form.successMessage": "شكراً لك. تم استلام استفسارك بنجاح. سيتواصل معك مستشارنا قريباً.",
+        "service.residential.eyebrow": "خدماتنا",
+        "service.residential.title": "العقارات السكنية",
+        "service.residential.heading": "إرشاد سكني مناسب للعائلات",
+        "service.residential.paragraph1": "نساعد العائلات في العثور على المنزل المثالي في الخبر، مع التركيز على الأمان والراحة والقيمة طويلة الأجل. من الشقق الحديثة إلى الفلل الفسيحة، قوائمنا السكنية مصممة لتلبية احتياجاتك.",
+        "service.residential.paragraph2": "يقدم مستشارونا إرشادات واضحة حول الأحياء والمرافق وإمكانات الاستثمار، مما يضمن لك قراراً واثقاً.",
+        "service.residential.benefit1": "خيارات عقارية عائلية",
+        "service.residential.benefit2": "رؤى الأحياء",
+        "service.residential.benefit3": "نصائح استثمارية",
+        "service.residential.benefit4": "دعم عملاء متميز",
+        "service.residential.viewProperties": "عرض العقارات",
+        "service.residential.talkAdvisor": "تحدث إلى مستشار",
+        "service.commercial.eyebrow": "خدماتنا",
+        "service.commercial.title": "العقارات التجارية",
+        "service.commercial.heading": "الفرص التجارية والاستشارات",
+        "service.commercial.paragraph1": "يقدم قسمنا التجاري استشارات متخصصة للمساحات المكتبية ومنافذ البيع بالتجزئة والعقارات الاستثمارية في سوق الخبر الديناميكي.",
+        "service.commercial.paragraph2": "نحلل الموقع وحركة المرور وإمكانات النمو لمساعدتك في الحصول على الأصل التجاري المناسب.",
+        "service.commercial.benefit1": "تحليل الاستثمار",
+        "service.commercial.benefit2": "مواقع متميزة",
+        "service.commercial.benefit3": "نصائح تركز على العائد",
+        "service.commercial.benefit4": "دعم التفاوض",
+        "service.commercial.viewProperties": "عرض العقارات",
+        "service.commercial.talkAdvisor": "تحدث إلى مستشار",
+        "service.guidance.eyebrow": "خدماتنا",
+        "service.guidance.title": "الإرشاد العقاري",
+        "service.guidance.heading": "قرارات عقارية واضحة وواثقة",
+        "service.guidance.paragraph1": "نساعدك في التنقل في سوق العقارات بالخبر بنصائح شفافة حول التسعير والإجراءات القانونية واختيار العقار.",
+        "service.guidance.paragraph2": "من المشترين لأول مرة إلى المستثمرين المخضرمين، يضمن إرشادنا فهمك لكل خطوة.",
+        "service.guidance.benefit1": "تحليل السوق",
+        "service.guidance.benefit2": "نظرة عامة على الإجراءات القانونية",
+        "service.guidance.benefit3": "مقارنة العقارات",
+        "service.guidance.benefit4": "نصائح التفاوض",
+        "service.guidance.viewProperties": "عرض العقارات",
+        "service.guidance.talkAdvisor": "تحدث إلى مستشار",
+        "service.consultation.eyebrow": "خدماتنا",
+        "service.consultation.title": "الاستشارات العقارية",
+        "service.consultation.heading": "استشارات عقارية احترافية",
+        "service.consultation.paragraph1": "يقدم مستشارونا نصائح شخصية لشراء أو بيع أو الاستثمار في سوق العقارات بالخبر.",
+        "service.consultation.paragraph2": "نجمع بين المعرفة المحلية والتحليل المهني لمساعدتك على تحقيق أهدافك العقارية.",
+        "service.consultation.benefit1": "استشارات فردية",
+        "service.consultation.benefit2": "تقييم السوق",
+        "service.consultation.benefit3": "استراتيجية الاستثمار",
+        "service.consultation.benefit4": "دعم ما بعد البيع",
+        "service.consultation.viewProperties": "عرض العقارات",
+        "service.consultation.talkAdvisor": "تحدث إلى مستشار",
+        "service.relatedTitle": "خدمات ذات صلة",
+        "legal.privacyTitle": "سياسة الخصوصية",
+        "legal.updated": "آخر تحديث: يناير 2026",
+        "legal.privacyIntroTitle": "مقدمة",
+        "legal.privacyIntro": "تحترم شركة سمة المتحدة العقارية خصوصيتك وتلتزم بحماية بياناتك الشخصية. تشرح سياسة الخصوصية هذه كيفية جمعنا واستخدامنا وحمايتنا لمعلوماتك عند زيارتك لموقعنا أو استخدام خدماتنا.",
+        "legal.privacyDataTitle": "المعلومات التي نجمعها",
+        "legal.privacyData": "قد نجمع معلومات شخصية مثل اسمك وعنوان بريدك الإلكتروني ورقم هاتفك وأي تفاصيل تقدمها من خلال نماذج الاتصال أو استفسارات المستشار.",
+        "legal.privacyUseTitle": "كيف نستخدم معلوماتك",
+        "legal.privacyUse": "نستخدم معلوماتك للرد على الاستفسارات وتقديم الخدمات العقارية وتحسين موقعنا والامتثال للالتزامات القانونية.",
+        "legal.privacyShareTitle": "مشاركة المعلومات",
+        "legal.privacyShare": "لا نبيع بياناتك الشخصية. قد نشارك المعلومات مع أطراف ثالثة موثوقة تساعدنا في تشغيل موقعنا أو إدارة أعمالنا، بشرط موافقتهم على الحفاظ على سريتها.",
+        "legal.privacySecurityTitle": "أمن البيانات",
+        "legal.privacySecurity": "ننفذ تدابير تقنية وتنظيمية مناسبة لحماية بياناتك الشخصية من الوصول غير المصرح به أو التغيير أو الكشف.",
+        "legal.privacyRightsTitle": "حقوقك",
+        "legal.privacyRights": "لديك الحق في الوصول إلى معلوماتك الشخصية أو تصحيحها أو حذفها. لممارسة هذه الحقوق، يرجى الاتصال بنا على contact.sama.unitedrealestate@gmail.com.",
+        "legal.privacyCookiesTitle": "ملفات الارتباط",
+        "legal.privacyCookies": "قد يستخدم موقعنا ملفات الارتباط لتحسين تجربة التصفح. راجع سياسة ملفات الارتباط لمزيد من التفاصيل.",
+        "legal.privacyContactTitle": "اتصل بنا",
+        "legal.privacyContact": "إذا كانت لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا على contact.sama.unitedrealestate@gmail.com أو الاتصال على +966 50 572 3111.",
+    },
+    ur: {
+        // Urdu translations similar in structure
+        "nav.home": "ہوم",
+        "nav.about": "ہمارے بارے میں",
+        "nav.properties": "جائیدادیں",
+        "nav.services": "خدمات",
+        "nav.contact": "رابطہ کریں",
+        "nav.advisor": "مشیر سے بات کریں",
+        "lang.current": "اردو",
+        // ... (complete translations would be here)
+    },
+    zh: {
+        "nav.home": "首页",
+        "nav.about": "关于我们",
+        "nav.properties": "房产",
+        "nav.services": "服务",
+        "nav.contact": "联系我们",
+        "nav.advisor": "咨询顾问",
+        "lang.current": "中文",
+        // ...
+    },
+    sara: {
+        "nav.home": "Home",
+        "nav.about": "About Us",
+        "nav.properties": "Properties",
+        "nav.services": "Services",
+        "nav.contact": "Contact",
+        "nav.advisor": "Talk to an Advisor",
+        "lang.current": "European/Sara",
+        // ... (Sara language - similar to English but distinct)
+    }
+};
+
+// ---------- Property Data ----------
+const propertiesData = [
+    {
+        id: 1,
+        category: "residential",
+        type: "family",
+        status: "available",
+        image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=600&auto=format&fit=crop",
+        translations: {
+            en: { title: "Modern Family Villa", location: "Al-Thuqbah, Al Khobar", description: "Spacious 4-bedroom family villa with private garden." },
+            ar: { title: "فيلا عائلية حديثة", location: "الثقبة، الخبر", description: "فيلا عائلية واسعة من 4 غرف نوم مع حديقة خاصة." },
+            ur: { title: "جدید خاندانی ولا", location: "الثقبہ، الخبر", description: "4 بیڈروم والی کشادہ خاندانی ولا جس میں نجی باغ ہے۔" },
+            zh: { title: "现代家庭别墅", location: "塔克巴，胡拜尔", description: "宽敞的4卧室家庭别墅，带私人花园。" },
+            sara: { title: "Modern Family Villa", location: "Al-Thuqbah, Al Khobar", description: "Spacious 4-bedroom family villa with private garden." }
+        },
+        bedrooms: 4,
+        bathrooms: 3,
+        area: "280 m²"
+    },
+    {
+        id: 2,
+        category: "residential",
+        type: "family",
+        status: "available",
+        image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=600&auto=format&fit=crop",
+        translations: {
+            en: { title: "Cozy Family Apartment", location: "Al Khobar", description: "3-bedroom apartment in a quiet family neighbourhood." },
+            ar: { title: "شقة عائلية مريحة", location: "الخبر", description: "شقة من 3 غرف نوم في حي عائلي هادئ." },
+            ur: { title: "آرام دہ خاندانی اپارٹمنٹ", location: "الخبر", description: "پرسکون خاندانی محلے میں 3 بیڈروم اپارٹمنٹ۔" },
+            zh: { title: "舒适家庭公寓", location: "胡拜尔", description: "位于安静家庭社区的3卧室公寓。" },
+            sara: { title: "Cozy Family Apartment", location: "Al Khobar", description: "3-bedroom apartment in a quiet family neighbourhood." }
+        },
+        bedrooms: 3,
+        bathrooms: 2,
+        area: "180 m²"
+    },
+    {
+        id: 3,
+        category: "commercial",
+        type: "commercial",
+        status: "available",
+        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600&auto=format&fit=crop",
+        translations: {
+            en: { title: "Prime Office Space", location: "Al Khobar", description: "Modern office space in a prime commercial district." },
+            ar: { title: "مساحة مكتبية متميزة", location: "الخبر", description: "مساحة مكتبية حديثة في منطقة تجارية رئيسية." },
+            ur: { title: "پرائم آفس اسپیس", location: "الخبر", description: "اہم تجارتی علاقے میں جدید دفتر کی جگہ۔" },
+            zh: { title: "优质办公空间", location: "胡拜尔", description: "位于主要商业区的现代办公空间。" },
+            sara: { title: "Prime Office Space", location: "Al Khobar", description: "Modern office space in a prime commercial district." }
+        },
+        bedrooms: 0,
+        bathrooms: 1,
+        area: "120 m²"
+    },
+    {
+        id: 4,
+        category: "residential",
+        type: "family",
+        status: "sold",
+        image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=600&auto=format&fit=crop",
+        translations: {
+            en: { title: "Luxury Apartment", location: "Al Khobar", description: "High-end apartment with sea view and premium amenities." },
+            ar: { title: "شقة فاخرة", location: "الخبر", description: "شقة راقية بإطلالة بحرية ومرافق متميزة." },
+            ur: { title: "لگژری اپارٹمنٹ", location: "الخبر", description: "سمندری نظارے اور پریمیم سہولیات کے ساتھ اعلیٰ درجے کا اپارٹمنٹ۔" },
+            zh: { title: "豪华公寓", location: "胡拜尔", description: "海景高端公寓，配备高级设施。" },
+            sara: { title: "Luxury Apartment", location: "Al Khobar", description: "High-end apartment with sea view and premium amenities." }
+        },
+        bedrooms: 3,
+        bathrooms: 3,
+        area: "200 m²"
+    },
+    {
+        id: 5,
+        category: "residential",
+        type: "family",
+        status: "available",
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop",
+        translations: {
+            en: { title: "Elegant Townhouse", location: "Al-Thuqbah", description: "Stylish 3-bedroom townhouse with modern finishes." },
+            ar: { title: "تاون هاوس أنيق", location: "الثقبة", description: "تاون هاوس أنيق من 3 غرف نوم بتشطيبات حديثة." },
+            ur: { title: "خوبصورت ٹاؤن ہاؤس", location: "الثقبہ", description: "جدید فنش کے ساتھ 3 بیڈروم والا اسٹائلش ٹاؤن ہاؤس۔" },
+            zh: { title: "优雅联排别墅", location: "塔克巴", description: "3卧室时尚联排别墅，现代装修。" },
+            sara: { title: "Elegant Townhouse", location: "Al-Thuqbah", description: "Stylish 3-bedroom townhouse with modern finishes." }
+        },
+        bedrooms: 3,
+        bathrooms: 2,
+        area: "220 m²"
+    },
+    {
+        id: 6,
+        category: "commercial",
+        type: "commercial",
+        status: "available",
+        image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=600&auto=format&fit=crop",
+        translations: {
+            en: { title: "Retail Storefront", location: "Al Khobar", description: "High-traffic retail space ideal for business." },
+            ar: { title: "واجهة متجر", location: "الخبر", description: "مساحة بيع بالتجزئة عالية الحركة مثالية للأعمال." },
+            ur: { title: "ریٹیل اسٹور فرنٹ", location: "الخبر", description: "زیادہ ٹریفک والی ریٹیل جگہ کاروبار کے لیے مثالی۔" },
+            zh: { title: "零售店面", location: "胡拜尔", description: "高人流量零售空间，适合商业用途。" },
+            sara: { title: "Retail Storefront", location: "Al Khobar", description: "High-traffic retail space ideal for business." }
+        },
+        bedrooms: 0,
+        bathrooms: 1,
+        area: "80 m²"
+    }
+];
+
+// ---------- State ----------
+let currentLang = localStorage.getItem('samaLanguage') || 'en';
+
+// ---------- DOM Ready ----------
+document.addEventListener('DOMContentLoaded', () => {
+    applyLanguage(currentLang);
+    initLanguageSelector();
+    initMobileMenu();
+    initActiveNav();
+    initPropertyRendering();
+    initPropertyFilters();
+    initForms();
+    initOpeningStatus();
+    initScrollAnimations();
+    closeDropdownsOnOutsideClick();
+});
+
+// ---------- Language Functions ----------
+function applyLanguage(lang) {
+    if (!translations[lang]) lang = 'en';
+    currentLang = lang;
+    localStorage.setItem('samaLanguage', lang);
+    document.documentElement.lang = lang;
+    document.documentElement.dir = (lang === 'ar' || lang === 'ur') ? 'rtl' : 'ltr';
+    
+    // Update all elements with data-i18n
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+
+    // Update current language label
+    const currentLangSpan = document.querySelector('.current-lang');
+    if (currentLangSpan) {
+        currentLangSpan.textContent = translations[lang]['lang.current'];
+    }
+
+    // Update language option active states
+    document.querySelectorAll('.lang-option').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+
+    // Re-render properties (they have their own translations)
+    renderProperties();
+    updateActiveNav();
+    updateOpeningStatus();
+}
+
+function initLanguageSelector() {
+    const langBtn = document.querySelector('.lang-btn');
+    const dropdown = document.getElementById('langDropdown');
+    if (!langBtn || !dropdown) return;
+
+    langBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = dropdown.classList.contains('open');
+        dropdown.classList.toggle('open', !isOpen);
+        langBtn.setAttribute('aria-expanded', !isOpen);
+    });
+
+    dropdown.addEventListener('click', (e) => {
+        const option = e.target.closest('.lang-option');
+        if (option) {
+            applyLanguage(option.dataset.lang);
+            dropdown.classList.remove('open');
+            langBtn.setAttribute('aria-expanded', 'false');
+        }
+    });
+}
+
+// ---------- Mobile Menu ----------
+function initMobileMenu() {
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.getElementById('mobileNav');
+    if (!toggle || !mobileNav) return;
+
+    toggle.addEventListener('click', () => {
+        const isOpen = mobileNav.classList.contains('open');
+        mobileNav.classList.toggle('open', !isOpen);
+        toggle.setAttribute('aria-expanded', !isOpen);
+        toggle.classList.toggle('active', !isOpen);
+    });
+
+    // Close on link click
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.classList.remove('active');
+        });
+    });
+}
+
+// ---------- Active Nav ----------
+function updateActiveNav() {
+    const currentPage = window.location.pathname.split('/').pop();
+    document.querySelectorAll('.desktop-nav a, .mobile-nav a').forEach(link => {
+        const href = link.getAttribute('href');
+        const hrefPage = href.split('/').pop();
+        link.classList.toggle('active', hrefPage === currentPage);
+    });
+}
+
+function initActiveNav() {
+    updateActiveNav();
+}
+
+// ---------- Property Rendering ----------
+function getPropertyTranslation(prop, lang) {
+    return prop.translations[lang] || prop.translations.en;
+}
+
+function createPropertyCard(prop) {
+    const t = getPropertyTranslation(prop, currentLang);
+    const card = document.createElement('article');
+    card.className = 'property-card';
+    card.dataset.id = prop.id;
+    card.innerHTML = `
+        <div class="property-card-image">
+            <img src="${prop.image}" alt="${t.title}" loading="lazy" decoding="async">
+            <span class="property-status ${prop.status}">${prop.status === 'available' ? translations[currentLang]['filters.available'] : 'Sold'}</span>
+        </div>
+        <div class="property-card-body">
+            <span class="property-category">${translations[currentLang]['filters.' + prop.category] || prop.category}</span>
+            <h3 class="property-title">${t.title}</h3>
+            <p class="property-location">📍 ${t.location}</p>
+            <div class="property-details">
+                <span class="property-detail-item">🛏 ${prop.bedrooms}</span>
+                <span class="property-detail-item">🛁 ${prop.bathrooms}</span>
+                <span class="property-detail-item">📐 ${prop.area}</span>
+            </div>
+            <p class="property-description">${t.description}</p>
+            <button class="btn btn-outline view-details" data-id="${prop.id}" data-i18n="featured.viewDetails">View Details</button>
+        </div>
+    `;
+    card.querySelector('.view-details').addEventListener('click', (e) => {
+        e.stopPropagation();
+        openPropertyModal(prop);
+    });
+    card.addEventListener('click', () => openPropertyModal(prop));
+    return card;
+}
+
+function renderFeaturedProperties() {
+    const grid = document.getElementById('featuredPropertiesGrid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    propertiesData.filter(p => p.status === 'available').slice(0, 3).forEach(prop => {
+        grid.appendChild(createPropertyCard(prop));
+    });
+}
+
+function renderAllProperties(filter = 'all') {
+    const grid = document.getElementById('allPropertiesGrid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    let filtered = propertiesData;
+    if (filter !== 'all') {
+        filtered = propertiesData.filter(p => {
+            if (filter === 'available') return p.status === 'available';
+            if (filter === 'family') return p.type === 'family';
+            return p.category === filter;
+        });
+    }
+    filtered.forEach(prop => {
+        grid.appendChild(createPropertyCard(prop));
+    });
+}
+
+function renderProperties() {
+    renderFeaturedProperties();
+    renderAllProperties(currentFilter || 'all');
+}
+
+let currentFilter = 'all';
+
+function initPropertyFilters() {
+    const filterBar = document.querySelector('.filter-bar');
+    if (!filterBar) return;
+    filterBar.addEventListener('click', (e) => {
+        const btn = e.target.closest('.filter-btn');
+        if (!btn) return;
+        currentFilter = btn.dataset.filter;
+        filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderAllProperties(currentFilter);
+    });
+}
+
+function initPropertyRendering() {
+    renderFeaturedProperties();
+    renderAllProperties('all');
+}
+
+// ---------- Property Modal ----------
+function openPropertyModal(prop) {
+    const t = getPropertyTranslation(prop, currentLang);
+    const modal = document.createElement('div');
+    modal.className = 'property-modal';
+    modal.innerHTML = `
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <img src="${prop.image}" alt="${t.title}">
+            <h2>${t.title}</h2>
+            <p>📍 ${t.location}</p>
+            <p>🛏 ${prop.bedrooms} | 🛁 ${prop.bathrooms} | 📐 ${prop.area}</p>
+            <p>${t.description}</p>
+            <p><strong>${translations[currentLang]['filters.' + prop.category] || prop.category}</strong> · ${prop.status}</p>
+            <a href="../company/talk-to-an-advisor.html" class="btn btn-primary">${translations[currentLang]['nav.advisor']}</a>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    modal.querySelector('.modal-close').addEventListener('click', () => modal.remove());
+    modal.querySelector('.modal-backdrop').addEventListener('click', () => modal.remove());
+    modal.querySelector('.modal-close').focus();
+}
+
+// ---------- Form Validation ----------
+function initForms() {
+    const advisorForm = document.getElementById('advisorForm');
+    if (advisorForm) {
+        advisorForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (validateAdvisorForm()) {
+                const success = document.getElementById('advisorFormSuccess');
+                if (success) {
+                    success.hidden = false;
+                    advisorForm.reset();
+                    setTimeout(() => { success.hidden = true; }, 5000);
+                }
+            }
+        });
+    }
+}
+
+function validateAdvisorForm() {
+    const name = document.getElementById('fullName');
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
+    const propertyType = document.getElementById('propertyType');
+    const message = document.getElementById('message');
+    let isValid = true;
+
+    clearErrors();
+
+    if (!name.value.trim()) {
+        showError('fullNameError', translations[currentLang]['form.fullNameError']);
+        isValid = false;
+    }
+    if (!email.value.trim() || !/\S+@\S+\.\S+/.test(email.value)) {
+        showError('emailError', translations[currentLang]['form.emailError']);
+        isValid = false;
+    }
+    if (!phone.value.trim()) {
+        showError('phoneError', translations[currentLang]['form.phoneError']);
+        isValid = false;
+    }
+    if (!propertyType.value) {
+        showError('propertyTypeError', translations[currentLang]['form.propertyTypeError']);
+        isValid = false;
+    }
+    if (!message.value.trim()) {
+        showError('messageError', translations[currentLang]['form.messageError']);
+        isValid = false;
+    }
+    return isValid;
+}
+
+function showError(id, msg) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = msg;
+}
+
+function clearErrors() {
+    document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+}
+
+// Add missing translation keys for form errors dynamically
+function ensureFormErrorTranslations() {
+    const errorKeys = {
+        en: {
+            'form.fullNameError': 'Please enter your full name.',
+            'form.emailError': 'Please enter a valid email address.',
+            'form.phoneError': 'Please enter your phone number.',
+            'form.propertyTypeError': 'Please select a property type.',
+            'form.messageError': 'Please enter a message.'
+        },
+        ar: {
+            'form.fullNameError': 'يرجى إدخال اسمك الكامل.',
+            'form.emailError': 'يرجى إدخال عنوان بريد إلكتروني صالح.',
+            'form.phoneError': 'يرجى إدخال رقم هاتفك.',
+            'form.propertyTypeError': 'يرجى اختيار نوع العقار.',
+            'form.messageError': 'يرجى إدخال رسالة.'
+        }
+    };
+    // Extend translations
+    for (const lang in errorKeys) {
+        if (translations[lang]) {
+            Object.assign(translations[lang], errorKeys[lang]);
+        }
+    }
+}
+ensureFormErrorTranslations();
+
+// ---------- Opening Status (Saudi Timezone) ----------
+function updateOpeningStatus() {
+    const statusEl = document.getElementById('openStatus');
+    if (!statusEl) return;
+    const now = new Date();
+    const saudiTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Riyadh' }));
+    const day = saudiTime.getDay(); // 0=Sunday, 6=Saturday
+    const hours = saudiTime.getHours();
+    const minutes = saudiTime.getMinutes();
+    const timeInMinutes = hours * 60 + minutes;
+
+    let status = 'closed';
+    let label = translations[currentLang]['openClosed'] || 'Closed Now';
+
+    // Friday (day=5) closed
+    if (day === 5) {
+        status = 'closed';
+        label = translations[currentLang]['openClosed'] || 'Closed Now';
+    } else {
+        // Saturday (6), Sunday(0), Monday(1): 09:00-11:30, 15:30-21:30
+        // Tuesday(2), Wednesday(3), Thursday(4): 09:00-11:30, 13:30-21:30
+        let morningStart = 9 * 60;
+        let morningEnd = 11 * 60 + 30;
+        let eveningStart, eveningEnd = 21 * 60 + 30;
+        if ([6,0,1].includes(day)) {
+            eveningStart = 15 * 60 + 30;
+        } else {
+            eveningStart = 13 * 60 + 30;
+        }
+        if ((timeInMinutes >= morningStart && timeInMinutes < morningEnd) ||
+            (timeInMinutes >= eveningStart && timeInMinutes < eveningEnd)) {
+            status = 'open';
+            label = translations[currentLang]['openNow'] || 'Open Now';
+        } else if (timeInMinutes < morningStart) {
+            status = 'soon';
+            label = translations[currentLang]['opensSoon'] || 'Opens Soon';
+        } else {
+            status = 'closed';
+            label = translations[currentLang]['openClosed'] || 'Closed Now';
+        }
+    }
+
+    statusEl.className = 'open-status ' + status;
+    statusEl.textContent = label;
+}
+
+function initOpeningStatus() {
+    updateOpeningStatus();
+    setInterval(updateOpeningStatus, 60000);
+}
+
+// ---------- Scroll Animations ----------
+function initScrollAnimations() {
+    const elements = document.querySelectorAll('.service-card, .property-card, .about-image, .about-content');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    elements.forEach(el => {
+        el.classList.add('animate-ready');
+        observer.observe(el);
+    });
+}
+
+// ---------- Close dropdowns on outside click ----------
+function closeDropdownsOnOutsideClick() {
+    document.addEventListener('click', (e) => {
+        const dropdown = document.getElementById('langDropdown');
+        const langBtn = document.querySelector('.lang-btn');
+        if (dropdown && dropdown.classList.contains('open') &&
+            !dropdown.contains(e.target) && !langBtn.contains(e.target)) {
+            dropdown.classList.remove('open');
+            langBtn.setAttribute('aria-expanded', 'false');
+        }
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            const dropdown = document.getElementById('langDropdown');
+            if (dropdown && dropdown.classList.contains('open')) {
+                dropdown.classList.remove('open');
+                document.querySelector('.lang-btn').setAttribute('aria-expanded', 'false');
+            }
+        }
+    });
+      }
