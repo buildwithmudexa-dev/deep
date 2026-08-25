@@ -1320,7 +1320,10 @@ function renderAllProperties(filter = 'all') {
     if (filter !== 'all') {
         filtered = baseData.filter(p => {
             if (filter === 'available') return p.status === 'available';
-            if (filter === 'family') return p.type === 'family' || p.type === 'villa';
+            if (filter === 'villa') return p.type === 'villa';
+            if (filter === 'family') return p.type === 'family';
+            if (filter === 'residential') return p.category === 'residential' && p.type !== 'villa';
+            if (filter === 'commercial') return p.category === 'commercial';
             return p.category === filter;
         });
     }
