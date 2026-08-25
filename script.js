@@ -34,6 +34,10 @@ const translations = {
         "services.commercial.title": "Commercial Opportunities",
         "services.commercial.desc": "Commercial property opportunities and consultation.",
         "services.commercial.cta": "Explore Commercial",
+        "services.villas.category": "Villas",
+        "services.villas.title": "Luxury Villas",
+        "services.villas.desc": "Premium family villas with modern amenities.",
+        "services.villas.cta": "Explore Villas",
         "services.guidance.category": "Guidance",
         "services.guidance.title": "Property Guidance",
         "services.guidance.desc": "Clear guidance to help clients make confident property decisions.",
@@ -232,6 +236,10 @@ const translations = {
         "services.commercial.title": "فرص تجارية",
         "services.commercial.desc": "فرص عقارية تجارية واستشارات.",
         "services.commercial.cta": "استكشف التجاري",
+        "services.villas.category": "الفلل",
+        "services.villas.title": "فلل فاخرة",
+        "services.villas.desc": "فلل عائلية فاخرة مع وسائل راحة حديثة.",
+        "services.villas.cta": "استكشف الفلل",
         "services.guidance.category": "إرشاد",
         "services.guidance.title": "الإرشاد العقاري",
         "services.guidance.desc": "إرشادات واضحة لمساعدة العملاء على اتخاذ قرارات عقارية واثقة.",
@@ -430,6 +438,10 @@ const translations = {
         "services.commercial.title": "تجارتی مواقع",
         "services.commercial.desc": "تجارتی جائیداد کے مواقع اور مشاورت۔",
         "services.commercial.cta": "تجارتی دریافت کریں",
+        "services.villas.category": "ولاز",
+        "services.villas.title": "لگژری ولاز",
+        "services.villas.desc": "جدید سہولیات کے ساتھ پریمیم خاندانی ولاز۔",
+        "services.villas.cta": "ولاز دریافت کریں",
         "services.guidance.category": "رہنمائی",
         "services.guidance.title": "جائیداد کی رہنمائی",
         "services.guidance.desc": "گاہکوں کو پراعتماد جائیداد کے فیصلے کرنے میں مدد کے لیے واضح رہنمائی۔",
@@ -628,6 +640,10 @@ const translations = {
         "services.commercial.title": "商业机会",
         "services.commercial.desc": "商业地产机会和咨询。",
         "services.commercial.cta": "探索商业",
+        "services.villas.category": "别墅",
+        "services.villas.title": "豪华别墅",
+        "services.villas.desc": "配备现代设施的高级家庭别墅。",
+        "services.villas.cta": "探索别墅",
         "services.guidance.category": "指导",
         "services.guidance.title": "房产指导",
         "services.guidance.desc": "清晰的指导，帮助客户做出自信的房产决策。",
@@ -826,6 +842,10 @@ const translations = {
         "services.commercial.title": "Commercial Opportunities",
         "services.commercial.desc": "Commercial property opportunities and consultation.",
         "services.commercial.cta": "Explore Commercial",
+        "services.villas.category": "Villas",
+        "services.villas.title": "Luxury Villas",
+        "services.villas.desc": "Premium family villas with modern amenities.",
+        "services.villas.cta": "Explore Villas",
         "services.guidance.category": "Guidance",
         "services.guidance.title": "Property Guidance",
         "services.guidance.desc": "Clear guidance to help clients make confident property decisions.",
@@ -1162,7 +1182,6 @@ function applyLanguage(lang) {
     document.documentElement.lang = lang;
     document.documentElement.dir = (lang === 'ar' || lang === 'ur') ? 'rtl' : 'ltr';
     
-    // Update all elements with data-i18n
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
@@ -1170,18 +1189,15 @@ function applyLanguage(lang) {
         }
     });
 
-    // Update current language label
     const currentLangSpan = document.querySelector('.current-lang');
     if (currentLangSpan) {
         currentLangSpan.textContent = translations[lang]['lang.current'];
     }
 
-    // Update language option active states
     document.querySelectorAll('.lang-option').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.lang === lang);
     });
 
-    // Re-render properties (they have their own translations)
     renderProperties();
     updateActiveNav();
     updateOpeningStatus();
@@ -1222,7 +1238,6 @@ function initMobileMenu() {
         toggle.classList.toggle('active', !isOpen);
     });
 
-    // Close on link click
     mobileNav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             mobileNav.classList.remove('open');
@@ -1296,7 +1311,6 @@ function renderAllProperties(filter = 'all') {
     if (!grid) return;
     grid.innerHTML = '';
     
-    // Apply page filter if set (e.g., on villas page)
     let baseData = propertiesData;
     if (window.__PAGE_FILTER__ === 'villa') {
         baseData = propertiesData.filter(p => p.type === 'villa');
@@ -1428,7 +1442,7 @@ function updateOpeningStatus() {
     if (!statusEl) return;
     const now = new Date();
     const saudiTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Riyadh' }));
-    const day = saudiTime.getDay(); // 0=Sunday, 6=Saturday
+    const day = saudiTime.getDay();
     const hours = saudiTime.getHours();
     const minutes = saudiTime.getMinutes();
     const timeInMinutes = hours * 60 + minutes;
@@ -1436,7 +1450,6 @@ function updateOpeningStatus() {
     let status = 'closed';
     let label = translations[currentLang]['openClosed'];
 
-    // Friday (day=5) closed
     if (day === 5) {
         status = 'closed';
         label = translations[currentLang]['openClosed'];
