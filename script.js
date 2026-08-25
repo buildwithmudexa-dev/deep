@@ -107,6 +107,7 @@ const translations = {
         "openNow": "Open Now",
         "openClosed": "Closed Now",
         "opensSoon": "Opens Soon",
+        "soldText": "Sold",
         "service.residential.eyebrow": "Our Services",
         "service.residential.title": "Residential Properties",
         "service.residential.heading": "Family-Friendly Residential Guidance",
@@ -195,7 +196,11 @@ const translations = {
         "legal.cookieManageTitle": "Managing Cookies",
         "legal.cookieManage": "You can control and/or delete cookies as you wish. Most browsers allow you to refuse or accept cookies. However, disabling cookies may affect the functionality of our website.",
         "legal.cookieContactTitle": "Contact Us",
-        "legal.cookieContact": "If you have any questions about our use of cookies, please contact us at contact.sama.unitedrealestate@gmail.com."
+        "legal.cookieContact": "If you have any questions about our use of cookies, please contact us at contact.sama.unitedrealestate@gmail.com.",
+        "nav.villas": "Villas",
+        "villas.eyebrow": "Exclusive Collection",
+        "villas.pageTitle": "Luxury Villas in Al Khobar",
+        "villas.subtitle": "Discover our handpicked selection of premium family villas"
     },
     ar: {
         "nav.home": "الرئيسية",
@@ -300,6 +305,7 @@ const translations = {
         "openNow": "مفتوح الآن",
         "openClosed": "مغلق الآن",
         "opensSoon": "يفتح قريباً",
+        "soldText": "مباع",
         "service.residential.eyebrow": "خدماتنا",
         "service.residential.title": "العقارات السكنية",
         "service.residential.heading": "إرشاد سكني مناسب للعائلات",
@@ -388,7 +394,11 @@ const translations = {
         "legal.cookieManageTitle": "إدارة ملفات الارتباط",
         "legal.cookieManage": "يمكنك التحكم في ملفات الارتباط و/أو حذفها كما تشاء. تسمح معظم المتصفحات برفض ملفات الارتباط أو قبولها. ومع ذلك، قد يؤثر تعطيل ملفات الارتباط على وظائف موقعنا.",
         "legal.cookieContactTitle": "اتصل بنا",
-        "legal.cookieContact": "إذا كانت لديك أي أسئلة حول استخدامنا لملفات الارتباط، يرجى الاتصال بنا على contact.sama.unitedrealestate@gmail.com."
+        "legal.cookieContact": "إذا كانت لديك أي أسئلة حول استخدامنا لملفات الارتباط، يرجى الاتصال بنا على contact.sama.unitedrealestate@gmail.com.",
+        "nav.villas": "الفلل",
+        "villas.eyebrow": "مجموعة حصرية",
+        "villas.pageTitle": "فلل فاخرة في الخبر",
+        "villas.subtitle": "اكتشف مجموعتنا المختارة من الفلل العائلية الفاخرة"
     },
     ur: {
         "nav.home": "ہوم",
@@ -493,6 +503,7 @@ const translations = {
         "openNow": "اب کھلا ہے",
         "openClosed": "اب بند ہے",
         "opensSoon": "جلد کھلے گا",
+        "soldText": "فروخت شدہ",
         "service.residential.eyebrow": "ہماری خدمات",
         "service.residential.title": "رہائشی جائیدادیں",
         "service.residential.heading": "خاندان دوست رہائشی رہنمائی",
@@ -581,7 +592,11 @@ const translations = {
         "legal.cookieManageTitle": "کوکیز کا انتظام",
         "legal.cookieManage": "آپ اپنی مرضی کے مطابق کوکیز کو کنٹرول اور/یا حذف کر سکتے ہیں۔ زیادہ تر براؤزر آپ کو کوکیز کو مسترد یا قبول کرنے کی اجازت دیتے ہیں۔ تاہم، کوکیز کو غیر فعال کرنے سے ہماری ویب سائٹ کی فعالیت متاثر ہو سکتی ہے۔",
         "legal.cookieContactTitle": "ہم سے رابطہ کریں",
-        "legal.cookieContact": "اگر آپ کو ہمارے کوکیز کے استعمال کے بارے میں کوئی سوالات ہیں، تو براہ کرم ہم سے contact.sama.unitedrealestate@gmail.com پر رابطہ کریں۔"
+        "legal.cookieContact": "اگر آپ کو ہمارے کوکیز کے استعمال کے بارے میں کوئی سوالات ہیں، تو براہ کرم ہم سے contact.sama.unitedrealestate@gmail.com پر رابطہ کریں۔",
+        "nav.villas": "ولاز",
+        "villas.eyebrow": "خصوصی مجموعہ",
+        "villas.pageTitle": "الخبر میں لگژری ولاز",
+        "villas.subtitle": "ہماری منتخب کردہ پریمیم خاندانی ولاز دریافت کریں"
     },
     zh: {
         "nav.home": "首页",
@@ -686,6 +701,7 @@ const translations = {
         "openNow": "营业中",
         "openClosed": "已关闭",
         "opensSoon": "即将营业",
+        "soldText": "已售",
         "service.residential.eyebrow": "我们的服务",
         "service.residential.title": "住宅房产",
         "service.residential.heading": "适合家庭的住宅指导",
@@ -774,7 +790,11 @@ const translations = {
         "legal.cookieManageTitle": "管理Cookie",
         "legal.cookieManage": "您可以按照自己的意愿控制和/或删除Cookie。大多数浏览器允许您拒绝或接受Cookie。但是，禁用Cookie可能会影响我们网站的功能。",
         "legal.cookieContactTitle": "联系我们",
-        "legal.cookieContact": "如果您对我们使用Cookie有任何疑问，请通过 contact.sama.unitedrealestate@gmail.com 联系我们。"
+        "legal.cookieContact": "如果您对我们使用Cookie有任何疑问，请通过 contact.sama.unitedrealestate@gmail.com 联系我们。",
+        "nav.villas": "别墅",
+        "villas.eyebrow": "独家系列",
+        "villas.pageTitle": "胡拜尔的豪华别墅",
+        "villas.subtitle": "探索我们精心挑选的优质家庭别墅"
     },
     sara: {
         "nav.home": "Home",
@@ -879,6 +899,7 @@ const translations = {
         "openNow": "Open Now",
         "openClosed": "Closed Now",
         "opensSoon": "Opens Soon",
+        "soldText": "Sold",
         "service.residential.eyebrow": "Our Services",
         "service.residential.title": "Residential Properties",
         "service.residential.heading": "Family-Friendly Residential Guidance",
@@ -967,7 +988,11 @@ const translations = {
         "legal.cookieManageTitle": "Managing Cookies",
         "legal.cookieManage": "You can control and/or delete cookies as you wish. Most browsers allow you to refuse or accept cookies. However, disabling cookies may affect the functionality of our website.",
         "legal.cookieContactTitle": "Contact Us",
-        "legal.cookieContact": "If you have any questions about our use of cookies, please contact us at contact.sama.unitedrealestate@gmail.com."
+        "legal.cookieContact": "If you have any questions about our use of cookies, please contact us at contact.sama.unitedrealestate@gmail.com.",
+        "nav.villas": "Villas",
+        "villas.eyebrow": "Exclusive Selection",
+        "villas.pageTitle": "Luxurious Villas in Al Khobar",
+        "villas.subtitle": "Browse our curated premium family villas"
     }
 };
 
@@ -1074,44 +1099,46 @@ const propertiesData = [
         bedrooms: 0,
         bathrooms: 1,
         area: "80 m²"
+    },
+    {
+        id: 7,
+        category: "residential",
+        type: "villa",
+        status: "available",
+        image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=600&auto=format&fit=crop",
+        translations: {
+            en: { title: "Luxury Family Villa", location: "Al-Thuqbah, Al Khobar", description: "5-bedroom luxury villa with private pool and garden." },
+            ar: { title: "فيلا عائلية فاخرة", location: "الثقبة، الخبر", description: "فيلا فاخرة من 5 غرف نوم مع مسبح خاص وحديقة." },
+            ur: { title: "لگژری خاندانی ولا", location: "الثقبہ، الخبر", description: "5 بیڈروم لگژری ولا جس میں نجی پول اور باغ ہے۔" },
+            zh: { title: "豪华家庭别墅", location: "塔克巴，胡拜尔", description: "5卧室豪华别墅，带私人泳池和花园。" },
+            sara: { title: "Luxury Family Villa", location: "Al-Thuqbah, Al Khobar", description: "5-bedroom luxury villa with private pool and garden." }
+        },
+        bedrooms: 5,
+        bathrooms: 4,
+        area: "350 m²"
+    },
+    {
+        id: 8,
+        category: "residential",
+        type: "villa",
+        status: "available",
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop",
+        translations: {
+            en: { title: "Modern Villa with Sea View", location: "Al Khobar", description: "Contemporary 4-bedroom villa with panoramic sea views." },
+            ar: { title: "فيلا حديثة بإطلالة بحرية", location: "الخبر", description: "فيلا عصرية من 4 غرف نوم مع إطلالات بحرية بانورامية." },
+            ur: { title: "سمندری نظارے والی جدید ولا", location: "الخبر", description: "4 بیڈروم معاصر ولا جس میں panoramic سمندری نظارے ہیں۔" },
+            zh: { title: "海景现代别墅", location: "胡拜尔", description: "4卧室现代别墅，拥有全景海景。" },
+            sara: { title: "Modern Villa with Sea View", location: "Al Khobar", description: "Contemporary 4-bedroom villa with panoramic sea views." }
+        },
+        bedrooms: 4,
+        bathrooms: 3,
+        area: "300 m²"
     }
 ];
-{
-    id: 7,
-    category: "residential",
-    type: "villa",
-    status: "available",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=600&auto=format&fit=crop",
-    translations: {
-        en: { title: "Luxury Family Villa", location: "Al-Thuqbah, Al Khobar", description: "5-bedroom luxury villa with private pool and garden." },
-        ar: { title: "فيلا عائلية فاخرة", location: "الثقبة، الخبر", description: "فيلا فاخرة من 5 غرف نوم مع مسبح خاص وحديقة." },
-        ur: { title: "لگژری خاندانی ولا", location: "الثقبہ، الخبر", description: "5 بیڈروم لگژری ولا جس میں نجی پول اور باغ ہے۔" },
-        zh: { title: "豪华家庭别墅", location: "塔克巴，胡拜尔", description: "5卧室豪华别墅，带私人泳池和花园。" },
-        sara: { title: "Luxury Family Villa", location: "Al-Thuqbah, Al Khobar", description: "5-bedroom luxury villa with private pool and garden." }
-    },
-    bedrooms: 5,
-    bathrooms: 4,
-    area: "350 m²"
-},
-{
-    id: 8,
-    category: "residential",
-    type: "villa",
-    status: "available",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop",
-    translations: {
-        en: { title: "Modern Villa with Sea View", location: "Al Khobar", description: "Contemporary 4-bedroom villa with panoramic sea views." },
-        ar: { title: "فيلا حديثة بإطلالة بحرية", location: "الخبر", description: "فيلا عصرية من 4 غرف نوم مع إطلالات بحرية بانورامية." },
-        ur: { title: "سمندری نظارے والی جدید ولا", location: "الخبر", description: "4 بیڈروم معاصر ولا جس میں panoramic سمندری نظارے ہیں۔" },
-        zh: { title: "海景现代别墅", location: "胡拜尔", description: "4卧室现代别墅，拥有全景海景。" },
-        sara: { title: "Modern Villa with Sea View", location: "Al Khobar", description: "Contemporary 4-bedroom villa with panoramic sea views." }
-    },
-    bedrooms: 4,
-    bathrooms: 3,
-    area: "300 m²"
-}
+
 // ---------- State ----------
 let currentLang = localStorage.getItem('samaLanguage') || 'en';
+let currentFilter = 'all';
 
 // ---------- DOM Ready ----------
 document.addEventListener('DOMContentLoaded', () => {
@@ -1207,7 +1234,7 @@ function initMobileMenu() {
 
 // ---------- Active Nav ----------
 function updateActiveNav() {
-    const currentPage = window.location.pathname.split('/').pop();
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.desktop-nav a, .mobile-nav a').forEach(link => {
         const href = link.getAttribute('href');
         const hrefPage = href.split('/').pop();
@@ -1232,7 +1259,7 @@ function createPropertyCard(prop) {
     card.innerHTML = `
         <div class="property-card-image">
             <img src="${prop.image}" alt="${t.title}" loading="lazy" decoding="async">
-            <span class="property-status ${prop.status}">${prop.status === 'available' ? translations[currentLang]['filters.available'] : translations[currentLang]['soldText'] || 'Sold'}</span>
+            <span class="property-status ${prop.status}">${prop.status === 'available' ? translations[currentLang]['filters.available'] : translations[currentLang]['soldText']}</span>
         </div>
         <div class="property-card-body">
             <span class="property-category">${translations[currentLang]['filters.' + prop.category] || prop.category}</span>
@@ -1265,14 +1292,21 @@ function renderFeaturedProperties() {
 }
 
 function renderAllProperties(filter = 'all') {
-    const grid = document.getElementById('allPropertiesGrid');
+    const grid = document.getElementById('allPropertiesGrid') || document.getElementById('villasGrid');
     if (!grid) return;
     grid.innerHTML = '';
-    let filtered = propertiesData;
+    
+    // Apply page filter if set (e.g., on villas page)
+    let baseData = propertiesData;
+    if (window.__PAGE_FILTER__ === 'villa') {
+        baseData = propertiesData.filter(p => p.type === 'villa');
+    }
+    
+    let filtered = baseData;
     if (filter !== 'all') {
-        filtered = propertiesData.filter(p => {
+        filtered = baseData.filter(p => {
             if (filter === 'available') return p.status === 'available';
-            if (filter === 'family') return p.type === 'family';
+            if (filter === 'family') return p.type === 'family' || p.type === 'villa';
             return p.category === filter;
         });
     }
@@ -1285,8 +1319,6 @@ function renderProperties() {
     renderFeaturedProperties();
     renderAllProperties(currentFilter || 'all');
 }
-
-let currentFilter = 'all';
 
 function initPropertyFilters() {
     const filterBar = document.querySelector('.filter-bar');
