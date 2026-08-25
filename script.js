@@ -1506,9 +1506,6 @@ function closeDropdownsOnOutsideClick() {
                 dropdown.classList.remove('open');
                 document.querySelector('.lang-btn').setAttribute('aria-expanded', 'false');
             }
-
+        }
     });
-      
-}  
-                              
-    });
+        }
