@@ -1076,7 +1076,40 @@ const propertiesData = [
         area: "80 m²"
     }
 ];
-
+{
+    id: 7,
+    category: "residential",
+    type: "villa",
+    status: "available",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=600&auto=format&fit=crop",
+    translations: {
+        en: { title: "Luxury Family Villa", location: "Al-Thuqbah, Al Khobar", description: "5-bedroom luxury villa with private pool and garden." },
+        ar: { title: "فيلا عائلية فاخرة", location: "الثقبة، الخبر", description: "فيلا فاخرة من 5 غرف نوم مع مسبح خاص وحديقة." },
+        ur: { title: "لگژری خاندانی ولا", location: "الثقبہ، الخبر", description: "5 بیڈروم لگژری ولا جس میں نجی پول اور باغ ہے۔" },
+        zh: { title: "豪华家庭别墅", location: "塔克巴，胡拜尔", description: "5卧室豪华别墅，带私人泳池和花园。" },
+        sara: { title: "Luxury Family Villa", location: "Al-Thuqbah, Al Khobar", description: "5-bedroom luxury villa with private pool and garden." }
+    },
+    bedrooms: 5,
+    bathrooms: 4,
+    area: "350 m²"
+},
+{
+    id: 8,
+    category: "residential",
+    type: "villa",
+    status: "available",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop",
+    translations: {
+        en: { title: "Modern Villa with Sea View", location: "Al Khobar", description: "Contemporary 4-bedroom villa with panoramic sea views." },
+        ar: { title: "فيلا حديثة بإطلالة بحرية", location: "الخبر", description: "فيلا عصرية من 4 غرف نوم مع إطلالات بحرية بانورامية." },
+        ur: { title: "سمندری نظارے والی جدید ولا", location: "الخبر", description: "4 بیڈروم معاصر ولا جس میں panoramic سمندری نظارے ہیں۔" },
+        zh: { title: "海景现代别墅", location: "胡拜尔", description: "4卧室现代别墅，拥有全景海景。" },
+        sara: { title: "Modern Villa with Sea View", location: "Al Khobar", description: "Contemporary 4-bedroom villa with panoramic sea views." }
+    },
+    bedrooms: 4,
+    bathrooms: 3,
+    area: "300 m²"
+}
 // ---------- State ----------
 let currentLang = localStorage.getItem('samaLanguage') || 'en';
 
